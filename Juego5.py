@@ -7,6 +7,8 @@ tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
 
+state = {'mark': None, 'Taps': 1}
+
 def square(x, y):
     "Draw white square with black outline at (x, y)."
     up()
@@ -31,7 +33,7 @@ def tap(x, y):
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
-
+    state['Taps'] += 1 #Se le suma un contador para el numero de taps
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
     else:
@@ -52,13 +54,14 @@ def draw():
             square(x, y)
 
     mark = state['mark']
-
-    if mark is not None and hide[mark]:
+# Centrammos aqui el digito
+   if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
-        color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        goto(x + 25.5, y + 5)
+        color('red')
+        write(tiles[mark], align="center", font=('Arial', 30, 'normal'))
+
 
     update()
     ontimer(draw, 100)
