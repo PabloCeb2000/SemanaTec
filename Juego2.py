@@ -6,6 +6,13 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+colors=['gold','green','yellow', 'orange','pink'] #Lista con los colores posibles 
+colorSnake=random.choice(colors) 
+colorFood=random.choice(colors) 
+
+while(colorSnake==colorFood): 
+    colorFood=random.choice(colors)
+
 def change(x, y):
     "Change snake direction."
     aim.x = x
