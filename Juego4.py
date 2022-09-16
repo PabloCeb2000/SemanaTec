@@ -56,8 +56,9 @@ def move():
     draw()
 
     for target in targets:
-        if not inside(target):
-            return
+        if not inside(target):           
+            target.x = 150 # Se generan nuevos targets
+            target.y = randrange(-100,100) 
 
     ontimer(move, 50)
 
