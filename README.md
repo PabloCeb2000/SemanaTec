@@ -59,3 +59,7 @@ Se realizaron los siguientes cambios:
 - Se han cambiado los dígitos numéricos por letras para hacerlo más retador
 
 Estos cambios fueron implementados a los programas originales en el repositorio.
+
+# Links de videos
+Link del video de Pablo.
+https://drive.google.com/file/d/1bnYmIRcjqVICebpk3wXKbRzMI--ahVPp/view?usp=sharing
